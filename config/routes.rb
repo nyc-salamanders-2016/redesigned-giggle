@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   post '/flows/new', to: 'pages#create'
 
+
   root 'pages#home'
 
   resources :students, only: [:new, :create]
+  resources :pitches
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
